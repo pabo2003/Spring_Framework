@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="O6_Runtime_Value_Injection" />
+        <module name="O7_Spring_Environment" />
+        <module name="O8_Spring_Web_MVC" />
+        <module name="O4_FullModeVsLightMode" />
+        <module name="O9_REST_Controller" />
+        <module name="O3_Spring_DI" />
+        <module name="O1_Spring_Core" />
+        <module name="O5_Configuration" />
+        <module name="O2_Spring_Bean_LifeCycle" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Confiuguration" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
