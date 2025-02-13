@@ -16,10 +16,12 @@ public class CustomerController {
     }
 
     @PostMapping("/save"  )
-    public String saveCustomer(@RequestBody CustomerDTO customerDTO){
+    public boolean saveCustomer(@RequestBody CustomerDTO customerDTO){
 //        return "Customer saved";
-        System.out.println(customerDTO.getName());
-        return customerDTO.toString();
+        /*System.out.println(customerDTO.getName());
+        return customerDTO.toString();*/
+        boolean res = customerService.addCustomer(customerDTO);
+        return res;
     }
 }
 
