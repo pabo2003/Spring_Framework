@@ -2,23 +2,36 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="O6_Runtime_Value_Injection" />
+        <module name="_10_Back_End" />
         <module name="O7_Spring_Environment" />
         <module name="O8_Spring_Web_MVC" />
-        <module name="O4_FullModeVsLightMode" />
         <module name="O9_REST_Controller" />
-        <module name="O3_Spring_DI" />
+        <module name="_13_Spring_Boot" />
         <module name="O1_Spring_Core" />
         <module name="O5_Configuration" />
         <module name="O2_Spring_Bean_LifeCycle" />
+        <module name="O6_Runtime_Value_Injection" />
+        <module name="_12_Spring_Data_JPA" />
+        <module name="O4_FullModeVsLightMode" />
+        <module name="O3_Spring_DI" />
+        <module name="_11_font_end" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="_11_Font_End" target="1.8" />
+      <module name="_11_Front_End" target="1.8" />
       <module name="Confiuguration" target="1.8" />
+      <module name="I0_Back_End" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="_13_Spring_Boot" options="-parameters" />
+    </option>
   </component>
 </project>
