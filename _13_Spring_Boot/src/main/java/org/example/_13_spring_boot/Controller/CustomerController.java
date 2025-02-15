@@ -5,15 +5,21 @@ import org.example._13_spring_boot.Service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1/customer")
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
+
     @GetMapping("/getAll")
-    public String getAllCustomers(){
-        return "All Customers";
+    public List<CustomerDTO> getAllCustomers(){
+        List<CustomerDTO> allCustomers = customerService.getAllCustomers();
+        return allCustomers;
     }
+
 
     @PostMapping("/save"  )
     public boolean saveCustomer(@RequestBody CustomerDTO customerDTO){
@@ -21,6 +27,19 @@ public class CustomerController {
         /*System.out.println(customerDTO.getName());
         return customerDTO.toString();*/
         boolean res = customerService.addCustomer(customerDTO);
+        return res;
+    }
+
+
+    @PutMapping("/update")
+    public CustomerDTO updateCustomer(@RequestBody CustomerDTO customerDTO){
+        CustomerDTO updatedCustomer = customerService.updateCustomer(customerDTO);
+        return updatedCustomer;
+    }
+
+    @DeleteMapping("/delete/{id}  ")
+    public boolean deleteCustomer(@PathVariable("id") int id){
+        boolean res = customerService.deleteCustomer(id);
         return res;
     }
 }
